@@ -6,7 +6,7 @@ This project aims to enhance network security by implementing a robust Network I
 
 **Key Steps and Components**
 
-1) Dataset Preparation: Wireshark is utilized to capture network traffic, creating a comprehensive dataset for analysis.
+1) Dataset Preparation: Wireshark is utilized to capture network traffic, creating a comprehensive dataset for analysis. There was a capturing of the network data from an attacker IP address to a target IP address. This network data includes the simulation of the ICMP flooding attack from the attacker IP address to the target IP address. 
 
 2) Data Preprocessing: The captured data undergoes cleaning, handling missing values, and normalization to prepare it for Apriori algorithm implementation.
 
