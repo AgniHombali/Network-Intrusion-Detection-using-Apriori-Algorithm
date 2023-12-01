@@ -1,19 +1,21 @@
 %%time
 x = 2 + 2
 y = x * 2
+
 import pandas as pd
 from mlxtend.preprocessing import TransactionEncoder
-from mlxtend.frequent_patterns import apriori, 
-association_rules
-df = pd.read_csv('C:/Users/agnih/OneDrive/Desktop/MSc 
-project/modifiedfile.csv')
-df['itemset'] = df.apply(lambda row: (row['Source'], 
-row['Destination'], row['Protocol']), axis=1)
+from mlxtend.frequent_patterns import apriori, association_rules
+
+df = pd.read_csv('The file path of the CSV file in which the recorded data from the Wireshark is stored.')
+
+df['itemset'] = df.apply(lambda row: (row['Source'], row['Destination'], row['Protocol']), axis=1)
+
 itemsets = df['itemset'].tolist()
+
 encoder = TransactionEncoder().fit(itemsets)
 onehot = encoder.transform(itemsets)
-onehot_df = pd.DataFrame(onehot, 
-columns=encoder.columns_)
-frequent_itemsets = apriori(onehot_df, min_support=0.5, 
-use_colnames=True)
+onehot_df = pd.DataFrame(onehot, columns=encoder.columns_)
+
+frequent_itemsets = apriori(onehot_df, min_support=0.5, use_colnames=True)
+
 print(frequent_itemsets)
