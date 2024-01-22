@@ -600,4 +600,157 @@ network traffic [48][50][51][52].
 
 ![image](https://github.com/AgniHombali/Network-Intrusion-Detection-using-Apriori-Algorithm/assets/41777150/36fc0d84-83f7-4ff2-ac47-c2f0ec37645f)
 
+Figure 1 – Display of the overall structure of the Wireshark application [48][50][51][52]. 
+
+Wireshark provides the functionality to record and save the network traffic from a specified 
+time to another fixed point. Such saved data will come in use for detailed research purposes. 
+The official format supported by Wireshark is the pcapng file format. When exporting the data, 
+the files can be exported in pcapng and other forms such as CSV and libpcap. Wireshark is 
+considered a rich GUI (Graphical User Interface) that can be used easily by cyber security 
+professionals for network analysis [48][50][51][52]. 
+
+In this context, Wireshark captures simulated network transactions between the attacker 
+machine (Parrot OS) and the target machine (Windows Server 2019). The Parrot OS machine 
+is used for a simulated Denial-Of-Service (DoS) attack on the Windows Server 2019. 
+Meanwhile, Wireshark is kept for recording on the Windows Server 2019. After a few minutes, 
+we stopped the recording and saved the recorded network traffic as a CSV file. After recording 
+the simulated network transactions, the recorded network traffic file should be input into the 
+Python program for data pre-processing and application of the Apriori algorithm 
+[48][50][51][52]. 
+
+The Wireshark is compatible with multiple operating systems including Windows and UNIX. 
+This makes it a very popular choice for network monitoring. The Wireshark has features for 
+identifying the content of the network messages and the protocol that is used for the 
+transmission of the network message. It can also help the network analyzer in filtering the 
+search so that the analyzer gets only the relevant information regarding the network transactions. 
+The Wireshark deals with a lot of packets and often with different network protocols. For a 
+normal human being, it is very difficult to identify the protocol of each network transaction and 
+analyze. Wireshark overcomes this difficulty by providing coloration to different protocols so 
+that the analyzer can identify easily. The Wireshark encounters encrypted content at times. For 
+analysis, Wireshark also provides decryption capabilities. The default format of the export files 
+in Wireshark is pcapng format. In addition to that, Wireshark also provides features for file 
+decompression and checking for different network protocols [53][54][55][56].
+
+**5.5 Review of Python and its libraries** 
+
+Python programming language is a dynamic programming language. It is used widely around 
+the world. It was designed by Guido Van Rossum in 1991. The main highlight of Python is 
+readability. Compared to older programming languages like Java and C, Python has smaller 
+programs. It has the kind of syntax that allows programmers to use fewer lines than Java or C 
+to execute an objective. It is a flexible and easy-to-use language. This programming language 
+is spreading vibrantly worldwide because of its user-friendliness. It works on different 
+platforms like Windows, Mac, Linux, and Raspberry Pi. It has very readable and easy-to
+understand syntax, which is connected to English. The Python code can be executed as soon as 
+the code is written because Python runs on an interpreter system. In addition, Python can be 
+written in a procedural, object-oriented, or functional way [57][58]. 
+
+Python has many advantages, and its main advantage is that it is portable and interactive. In 
+addition to that, Python has comprehensible structures. Python also has extensive support 
+libraries, such as NumPy and Pandas, that can be used for numerical and statistical operations 
+[57][58].
+
+On the other hand, the Python programming language also has some demerits. The performance 
+of Python is slower than that of Java and C because Python is an interpreted language. In other 
+words, Python can be an issue for performance-intensive tasks. The Global Interpreter Lock 
+(GIL) is a feature in Python that prevents parallel executions of the same Python code. This 
+feature limits the similar capabilities of Python. In addition to this, Python is highly dynamic in 
+nature. In other words, the types of Python variables can change during execution, making it 
+difficult to rectify. Lastly, Python is known for its vast memory consumption. This can be 
+noticed while working with large data [57][58]. 
+
+The Pandas Library: The Pandas Library was designed by Wes McKinney in 2008. This library 
+deals with the exploration and the editing of large data sets. This library helps programmers 
+and developers sanitize the data sets of unwanted characters. It helps in making the data sets 
+more readable and comprehensible. It uses statistical methods to aid an analyst in making 
+decisions. For instance, the Pandas library can give statistical measures like average, maximum 
+value, minimum value, and correlation. For this project, the Pandas library helps analyze the 
+captured network traffic file datasets in CSV format [21]. 
+
+mlxtend library: This library was created by Sabastian Raschka. It is a library that has 
+capabilities for machine learning. This library is mainly used for data analysis. For this project, 
+the mlxtend library can provide the in-built functionality of the Apriori algorithm. The Apriori 
+algorithm is used in this project for Network Intrusion Detection. The mlxtend library has many 
+such built functionality. From the mlxtend library, the Transaction Encoder and association 
+rules are also used in this project. These functionalities mainly help in pre-processing the data 
+and finding patterns. How these functionalities work will be discussed in further sections 
+[10][22][23]. 
+
+**Chapter 6: Implementation** 
+
+This chapter is the most significant chapter of the project. It showcases the exact methodology 
+proposed in this project. It explores the tools and technologies used. It explains the necessary 
+aspects of the python program that is being used in this project. More importantly, this chapter 
+explains the syntax of the python program used and the exact working of the Apriori algorithm 
+using an example[1][8][12][13][14]. 
+
+**6.1 Data Collection Process**
+
+I have used the capabilities of the iLabs provided by the EC Council to simulate the attack. 
+iLabs is a virtual lab. Inside the virtual lab, there are many machines with different operating 
+systems. I am using the Parrot OS machine and the Windows Server 2019 for this project. I 
+have considered the Parrot OS my attacker machine and the Windows Server 2019 as my target 
+machine. One of the main advantages of using iLabs is that all the machines will have essential 
+ethical hacking tools. Wireshark is one of the ethical hacking tools I have used for this project. 
+As discussed earlier, Wireshark is the tool used for recording the network traffic between the 
+Parrot OS and the Windows Server 2019. First, I will login in the EC council iLabs portal using 
+the credentials. Next, I will launch the iLabs practice labs. Inside the iLabs, there are the 
+following virtual machines available to use: Windows 11, Windows Server 2022, Windows 
+Server 2019, Parrot Security, Ubuntu, and Android [15][16][17][18][19]. 
+
+![image](https://github.com/AgniHombali/Network-Intrusion-Detection-using-Apriori-Algorithm/assets/41777150/4d20358a-7cc2-4343-80d3-c3b6c5758f99)
+
+Figure 2 – Display of the overview of the iLabs setup [15][16][17][18][19].
+
+I am going to open the Parrot Security to configure to launch the terminal and start a flooding 
+attack. So first, I am going to open the Parrot Security virtual machine and login using the Parrot 
+OS credentials. Next, I am going to open the terminal and type the “ifconfig” command to learn 
+the IP address of the Parrot Security in the network [15][16][17][18][19].
+
+![image](https://github.com/AgniHombali/Network-Intrusion-Detection-using-Apriori-Algorithm/assets/41777150/ad858eb1-a4fa-4a1f-bf8a-273ac9f965fc)
+
+Figure 3 – Identification of the IP address of Parrot OS (attacker machine) [15][16][17][18][19].
+
+I have now learned that the IP address of Parrot Security is 10.10.1.13. Now, I am going to 
+switch over to the Windows Server 2019 to find it’s IP address. Using the login credentials of 
+Windows Server 2019, I am going to login and open a command prompt. In the command 
+prompt, I am going to execute the command “ipconfig” to learn the IP address of Windows 
+Server 2019 [15][16][17][18][19].
+
+![image](https://github.com/AgniHombali/Network-Intrusion-Detection-using-Apriori-Algorithm/assets/41777150/d946de66-fd38-4f19-b29e-9994ff790a8b)
+
+Figure 4 – Identification of the IP address of Windows Server 2019 (target machine) 
+[15][16][17][18][19].
+
+I have now learned that the IP address of Windows Server 2019 is 10.10.1.19. Since we are 
+going to consider that the attacker machine is Parrot Security and the target machine is 
+Windows Server 2019, we can now consider that the IP address of the attacker machine is 
+10.10.1.13 and the IP address of the target machine is 10.10.1.19 [15][16][17][18][19].
+
+**Parrot Security – 10.10.1.13** 
+**Windows Server 2019 – 10.10.1.19** 
+
+Next, I am going to switch back to Parrot Security to download and install the hping3 tool to 
+create and launch the ICMP flooding attack from 10.10.1.13(Parrot Security) to 
+10.10.1.19(Windows Server 2019). In the Parrot Security, I am going to open the terminal and 
+execute the command “sudo apt-get install hping3” [15][16][17][18][19]. 
+
+This command will install the hping3. After this, I am going to launch an ICMP flood attack on 
+10.10.1.19(Windows Security 2019) by using the command “sudo hping3 -1 –flood 10.10.1.19” 
+[15][16][17][18][19]. 
+
+This will now launch an ICMP flooding attack on the Windows Server 2019 
+[10][15][16][17][23]. 
+
+![image](https://github.com/AgniHombali/Network-Intrusion-Detection-using-Apriori-Algorithm/assets/41777150/558cc187-2464-4184-8559-7752e09ea65c)
+
+Figure 5 – ICMP flooding attack [10][15][16][17][23].
+
+After this, we are going to switch to the Windows Server 2019 machine. In the Windows Server 
+2019 machine, we will open the Wireshark tool [15][16][17][18][19].
+
+
+
+
+
+
 
