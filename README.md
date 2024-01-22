@@ -1097,27 +1097,22 @@ Output: The itemset L which contains the most frequent itemsets.
 Variables: Ck is the candidate itemset for each iteration. Lk is the k-itemset for each iteration. 
 Methods: make_candidate_itemset(Lk-1); make_frequent_itemset(Ck, m) 
 Procedure:  
-k = 2; 
-L1 = All the elements in the database T. 
-while Lk-1 is not empty: 
 
-     //make_candidate_itemset(Lk-1) function takes the input which is the frequent 
-     //itemset in the previous iteration and forms a candidate itemset. The candidate 
-     //itemset contains the paired up itemsets from the previous frequent itemset.
-     
-     Ck = make_candidate_itemset(Lk-1);
-     
-     //make_frequent_itemset(Lk-1) function takes the input which is the candidate 
-     //itemset in the current iteration and forms a new frequent itemset. The new 
-     //frequent itemset contains the most frequent itemsets from the current 
-     //candidate itemset. The itemsets that enter the new frequent itemset are the 
-     //itemsets that have a frequency equal to or more than the minimum support 
-     //threshold m. 
-     
-     Lk = make_frequent_itemset(Ck, m); 
-     
-     k++; 
-     
+   k = 2; 
+   L1 = All the elements in the database T. 
+   while Lk-1 is not empty: 
+         //make_candidate_itemset(Lk-1) function takes the input which is the frequent 
+         //itemset in the previous iteration and forms a candidate itemset. The candidate 
+         //itemset contains the paired up itemsets from the previous frequent itemset.
+         Ck = make_candidate_itemset(Lk-1);
+         //make_frequent_itemset(Lk-1) function takes the input which is the candidate 
+         //itemset in the current iteration and forms a new frequent itemset. The new 
+         //frequent itemset contains the most frequent itemsets from the current 
+         //candidate itemset. The itemsets that enter the new frequent itemset are the 
+         //itemsets that have a frequency equal to or more than the minimum support 
+         //threshold m.
+         Lk = make_frequent_itemset(Ck, m); 
+         k++; 
 return Lk-2
 
 **6.4 Application of Apriori algorithm**
