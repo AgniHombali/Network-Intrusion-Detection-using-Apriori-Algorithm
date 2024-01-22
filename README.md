@@ -727,6 +727,7 @@ Windows Server 2019, we can now consider that the IP address of the attacker mac
 10.10.1.13 and the IP address of the target machine is 10.10.1.19 [15][16][17][18][19].
 
 **Parrot Security – 10.10.1.13** 
+
 **Windows Server 2019 – 10.10.1.19** 
 
 Next, I am going to switch back to Parrot Security to download and install the hping3 tool to 
