@@ -1705,6 +1705,356 @@ impact is experienced. There have been many attempts made already. In conclusion
 is a step towards the direction of finding a suitable methodology for threat detection 
 [1][8][12][13][14].
 
+**Chapter 9: Conclusion**
+
+The project is a methodology to detect network intrusions. The main highlight is to use the 
+Apriori algorithm. Apriori algorithm is a classification algorithm. The steps involved in this 
+methodology are, data collection, data pre-processing, application of the Apriori algorithm and 
+the interpretation of the output. The programming language used is the Python programming 
+language. The coding platform used is the Jupyter Notebook [1][4][8][12][13][14][57].
+
+The data collection was done in the confinement of iLabs. The attacker machine was the Parrot 
+OS(10.10.1.13) and the target machine was Windows Server 2019(10.10.1.19). An ICMP 
+flooding attack is simulated from the Parrot OS to the Windows Server 2019. The network 
+traffic is recorded using the Wireshark tool in the Windows Server 2019. The network traffic 
+data is then exported in the form of CSV file [1][4][5][8][12][13][14][67]. 
+
+Next comes the data pre-processing stage. In this stage, the data that was stored in the CSV file 
+is prepared for the application of the Apriori algorithm. The data is transformed into One-hot 
+encoded format [61][62][73][74][75][76][77][78].  
+
+After that, the Apriori algorithm is applied using the in-built functionality of the mlxtend library 
+in the Python programming language. The output of using the Apriori algorithm on the data is 
+the most frequent itemsets. These itemsets are then analyzed to understand what exactly is 
+causing the ICMP flooding attack [63][66]. 
+
+This project is a necessary step into experimenting with different sorting and filtering 
+algorithms for the purpose of Network Intrusion Detection Systems. The research and 
+development of such methodology should not stop at the Apriori algorithm. There should be 
+testing for different algorithms for the purpose of detecting network intrusion. I believe that 
+every algorithm has its own advantages and disadvantages. The comparison of the Apriori 
+algorithm with other available algorithms is discussed in the earlier sections. This calls for an 
+initiative to test every algorithm to understand how it can work and adapt for different network 
+environments and different datasets. In addition to this, newer and sophisticated tools can be 
+used for this methodology. For instance, I have used the most basic version of Wireshark. There 
+are many other tools which are more advanced than Wireshark. They can be used for network 
+traffic analysis, and they would also have better features. So, it is important to stay open to 
+finding new techniques and ways to perform Network Intrusion Detection [1][8][12][13][14].  
+
+It is important to understand the limitations of this project and find ways to overcome them. 
+The evolution would give new ways to identify network intrusions. Sometimes, it would also 
+give better results and have superior performances [1][8][12][13][14]. 
+
+Having said this, it is also not necessary that this is the only methodology available. Over time, 
+there may be the advent of newer methodologies that can help detect network intrusions better. 
+In conclusion, the methodology in this project should develop and evolve in parallel with 
+finding and developing newer methodologies [1][8][12][13][14].
+
+**Bibliography**
+
+[1]. Nureni Ayofe Azeez, Tolulope Jide Ayemobala, Sanjay Misra, Rytis Maskeliunas, and 
+Robertas Damasevicius, “Network Intrusion Detection with a Hashing Based Apriori 
+Algorithm Using Hadoop MapReduce,” MDPI, Dec 2, 2019.  
+
+[2]. Netscout, “What is an ICMP Flood Attack?,” NETSCOUT. https://www.netscout.com/what-is-ddos/icmp-flood 
+
+[3]. “Implementing Apriori Algorithm in Python - Javatpoint,” www.javatpoint.com. 
+https://www.javatpoint.com/implementing-apriori-algorithm-in-python
+
+[4]. Jupyter, “Project Jupyter,” Jupyter.org, 2019. https://jupyter.org/ 
+
+[5]. “EC-Council iLabs | IT Governance UK,” www.itgovernance.co.uk. https://www.itgovernance.co.uk/shop/product/ec-council
+ilabs#:~:text=With%20more%20than%20400%20complete (accessed Jul. 24, 2023). 
+
+[6]. L. Hanguang and N. Yu, “Intrusion Detection Technology Research Based on Apriori Algorithm,” Physics 
+Procedia, vol. 24, pp. 1615–1620, 2012, doi: https://doi.org/10.1016/j.phpro.2012.02.238. 
+
+[7]. C. N. Modi, D. R. Patel, A. Patel, and M. Rajarajan, “Integrating Signature Apriori based 
+Network Intrusion Detection System (NIDS) in Cloud Computing,” Procedia Technology, 
+vol. 6, pp. 905–912, 2012, doi: https://doi.org/10.1016/j.protcy.2012.10.110. 
+
+[8]. W. A. Al-Khater, S. Al-Ma’adeed, A. A. Ahmed, A. S. Sadiq, and M. K. Khan, 
+“Comprehensive Review of Cybercrime Detection Techniques,” IEEE Access, vol. 8, pp. 
+1–1, 2020, doi: https://doi.org/10.1109/access.2020.3011259. 
+
+[9]. “Classification Evaluation Metrics: Accuracy, Precision, Recall, and F1 Visually 
+Explained,” Context by Cohere, Jun. 07, 2022. https://txt.cohere.com/classification-eval
+metrics/#:~:text=The%20most%20straightforward%20way%20to 
+
+[10]. E. Alizadeh, “Essi Alizadeh - MLxtend: A Python Library with Interesting Tools for Data 
+Science Tasks,” ealizadeh.com, Jul. 17, 2021. https://ealizadeh.com/blog/mlxtend-library
+for-data-science/ 
+
+[11]. “Implementing Apriori algorithm in Python - GeeksforGeeks,” GeeksforGeeks, Jun. 12, 
+2019. https://www.geeksforgeeks.org/implementing-apriori-algorithm-in-python/ 
+
+[12]. K. K. Sindhu and B. B. Meshram, “Digital Forensics and Cyber Crime Datamining,” 
+Journal of Information Security, vol. 03, no. 03, pp. 196–201, 2012, doi: 
+https://doi.org/10.4236/jis.2012.33024. 
+
+[13]. H. Xie, “Research and Case Analysis of Apriori Algorithm Based on Mining Frequent 
+Item-Sets,” Open Journal of Social Sciences, vol. 9, no. 4, pp. 458–468, Apr. 2021, doi: 
+https://doi.org/10.4236/jss.2021.94034. 
+
+[14]. R. Agrawal and R. Srikant, “Fast Algorithms for Mining Association Rules.” Available: 
+https://rakesh.agrawal-family.com/papers/vldb94apriori.pdf  
+
+[15]. “Learn Wireshark in 10 minutes - Wireshark Tutorial for Beginners,” www.youtube.com. 
+https://www.youtube.com/watch?v=lb1Dw0elw0Q 
+[16]. “Wireshark Tip #20: Export to CSV,” www.youtube.com. 
+https://www.youtube.com/watch?v=NI4lPfkY8Hs (accessed Jul. 31, 2023). 
+
+[17]. “EC-Council iLabs - Sniffing Passwords using Wireshark,” www.youtube.com. 
+https://www.youtube.com/watch?v=iU_7zKypJZI (accessed Jul. 31, 2023). 
+
+[18]. I. Vanney, “hping3 flood ddos – Linux Hint.” https://linuxhint.com/hping3/ 
+
+[19]. “Hping3 Full Tutorial | #hping3,” www.youtube.com. 
+https://www.youtube.com/watch?v=ixSKUjeBTms (accessed Jul. 31, 2023). 
+
+[20]. G. Lawton, “Data Preprocessing: Definition, Key Steps and Concepts,” 
+SearchDataManagement, Jan. https://www.techtarget.com/searchdatamanagement/definition/data-preprocessing 
+
+[21]. “Pandas Introduction,” 2022. www.w3schools.com. 
+https://www.w3schools.com/python/pandas/pandas_intro.asp#:~:text=Pandas%20is%20a
+ %20Python%20library 
+ 
+[22]. S. Raschka, “rasbt/mlxtend,” GitHub, Jul. 28, 2023. https://github.com/rasbt/mlxtend 
+(Accessed Jul. 28, 2023). 
+
+[23]. E. Alizadeh, “MLxtend: A Python Library with interesting tools for data science tasks,” 
+Medium, Dec. 30, 2020. https://towardsdatascience.com/mlxtend-a-python-library-with
+interesting-tools-for-data-science-tasks-d54c723f89cd 
+
+[24]. N. P. Dharshinni, F. Azmi, I. Fawwaz, A. M. Husein, and S. D. Siregar, “Analysis of 
+Accuracy K-Means and Apriori Algorithms for Patient Data Clusters,” Journal of Physics: 
+Conference Series, vol. 1230, no. 1, p. 012020, Jul. 2019, doi: https://doi.org/10.1088/1742
+6596/1230/1/012020. 
+
+[25]. P. He, B. Zhang, and S. Shen, “Effects of Out-of-Hospital Continuous Nursing on 
+Postoperative Breast Cancer Patients by Medical Big Data,” Journal of Healthcare 
+Engineering, vol. 2022, p. e9506915, Jan. 2022, doi: https://doi.org/10.1155/2022/9506915.
+
+[26]. F. Ye, "Research and Application of Improved APRIORI Algorithm Based on Hash 
+Technology," 2020 Asia-Pacific Conference on Image Processing, Electronics and 
+Computers (IPEC), Dalian, China, 2020, pp. 64-67, doi: 10.1109/IPEC49694.2020.9115141. 
+
+[27]. “Measure execution time with timeit in Python | note.nkmk.me,” note.nkmk.me, May 15, 
+2023.https://note.nkmk.me/en/python-timeitmeasure/#:~:text=In%20Jupyter%20Notebook%20(IPython)%2C 
+(accessed Sep. 01, 2023).
+
+[28]. “Frequent Pattern (FP) Growth Algorithm In Data Mining,” www.softwaretestinghelp.com. 
+https://www.softwaretestinghelp.com/fp-growth-algorithm-data-mining/ 
+ 
+[29]. “Data Mining Algorithms In R/Frequent Pattern Mining/The FP-Growth Algorithm - 
+Wikibooks, open books for an open world,” en.wikibooks.org. 
+https://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Frequent_Pattern_Mining/
+ The_FP-Growth_Algorithm 
+ 
+[30]. “FP-Growth - RapidMiner Documentation,” docs.rapidminer.com. 
+https://docs.rapidminer.com/latest/studio/operators/modeling/associations/fp_growth.html 
+
+[31]. Wikipedia Contributors, “Association rule learning,” Wikipedia, May 18, 2019. 
+https://en.wikipedia.org/wiki/Association_rule_learning 
+
+[32]. A. Makharadze, “3.4) Association Rule Mining using ECLAT Algorithm,” Machine 
+Learning and Artificial Intelligence, Sep. 25, 2020. https://medium.com/machine-learning
+and-artificial-intelligence/3-4-association-rule-mining-using-eclat-algorithm
+b6e50aab2147 
+
+[33]. “Machine Learning- Eclat Algorithm,” i2tutorials, Aug. 04, 2023. 
+https://www.i2tutorials.com/machine-learning-tutorial/machine-learning-eclat-algorithm/ 
+(accessed Aug. 04, 2023). 
+
+[34]. “Implementation Of ECLAT Algorithm Using Python 2023,” hands-on.cloud, Feb. 22, 
+2022. https://hands-on.cloud/implementation-of-eclat-algorithm-using-python/ 
+
+[35]. “ML | ECLAT Algorithm,” GeeksforGeeks, Jun. 11, 2019. 
+https://www.geeksforgeeks.org/ml-eclat-algorithm/ 
+
+[36]. “What is XGBoost? An Introduction to XGBoost Algorithm in Machine Learning | 
+Simplilearn,” Simplilearn.com, Nov. 22, 2022. https://www.simplilearn.com/what-is
+xgboost-algorithm-in-machine-learning-article 
+
+[37]. “XGBoost Algorithm | Brief Guide To XGBoost Algorithm,” EDUCBA, Jul. 08, 2019. 
+https://www.educba.com/xgboost-algorithm/ 
+
+[38]. Jason Brownlee, “A Gentle Introduction to XGBoost for Applied Machine 
+Learning,” Machine Learning Mastery, Aug. 16, 2016. 
+https://machinelearningmastery.com/gentle-introduction-xgboost-applied-machine
+learning/ 
+
+[39]. Wikipedia Contributors, “XGBoost,” Wikipedia, Sep. 09, 2019. 
+https://en.wikipedia.org/wiki/Xgboost 
+
+[40]. GeeksforGeeks, “Apriori Algorithm - GeeksforGeeks,” GeeksforGeeks, Sep. 04, 2018. 
+https://www.geeksforgeeks.org/apriori-algorithm/ 
+
+[41]. “Apriori algorithm,” Wikipedia, Mar. 15, 2020. 
+https://en.wikipedia.org/wiki/Apriori_algorithm 
+
+[42]. “DataRobot Automated Machine Learning,” English, 2019. 
+https://www.datarobot.com/wiki/deep-learning/ 
+ 
+[43]. “Deep Learning Algorithms - Javatpoint,” www.javatpoint.com. 
+https://www.javatpoint.com/deep-learning-algorithms 
+
+[44]. A. Biswal, “Top 10 Deep Learning Algorithms You Should Know in 
+(2021),” Simplilearn.com, Feb. 16, 2023. https://www.simplilearn.com/tutorials/deep
+learning-tutorial/deep-learning-algorithm 
+
+[45]. Wikipedia Contributors, “Deep learning,” Wikipedia, May 10, 2019. 
+https://en.wikipedia.org/wiki/Deep_learning 
+
+[46]. “Anaconda Navigator — Anaconda documentation,” docs.anaconda.com. 
+https://docs.anaconda.com/free/navigator/index.html 
+
+[47]. “Anaconda Navigator — Anaconda documentation,” docs.anaconda.com. 
+https://docs.anaconda.com/free/navigator/index.html 
+
+[48]. CompTIA, “What Is Wireshark and How to Use It | Cybersecurity | CompTIA,” CompTIA, 
+2020. https://www.comptia.org/content/articles/what-is-wireshark-and-how-to-use-it 
+
+[49]. “hping3 | Kali Linux Tools,” Kali Linux. 
+https://www.kali.org/tools/hping3/#:~:text=hping3%20is%20a%20network%20tool 
+
+[50]. Wireshark Foundation, “Wireshark,” Wireshark.org, 2016. https://www.wireshark.org/
+
+[51]. E. Kost, “What is Wireshark? The Free Network Sniffing Tool | UpGuard,” 
+www.upguard.com, May 12, 2022. https://www.upguard.com/blog/what-is-wireshark 
+
+[52]. Cyber Writes Team, “What Is Wireshark? How to Use It For Network Sniffing?,” Cyber 
+Security News, Apr. 11, 2023. http://edgeservices.bing.com/edgesvc/redirect?url=https%3A%2F%2Fcybersecuritynews.
+ com%2Fwireshark%2F&hash=khHFhaJRUIh%2B0Q95D%2BrmlzoeBiZ%2FsMsSEQ4e
+ 2z%2FChIU%3D&key=pscunderside&usparams=cvid%3A51D%7CBingProd%7CE75567CCF0F503722E219EC36
+ 90FF6BEF141D74B90F10259E4CB838849D38033%5Ertone%3ACreative (accessed Jul. 25, 2023). 
+ 
+[53]. Wireshark, “Chapter 1. Introduction,” Wireshark.org, 2019. 
+https://www.wireshark.org/docs/wsug_html_chunked/ChapterIntroduction.html 
+
+[54]. Wireshark, “Wireshark · About,” www.wireshark.org. 
+https://www.wireshark.org/about.html 
+
+[55]. “How to Use Wireshark for Network Monitoring? | Tek-Tools,” TekTools, Jun. 01, 2020. 
+https://www.tek-tools.com/network/how-to-use-wireshark 
+
+[56]. “Introduction to Wireshark,” GeeksforGeeks, Jul. 25, 2019. 
+https://www.geeksforgeeks.org/introduction-to-wireshark/ 
+
+[57]. GeeksforGeeks, “Python Language Advantages and Applications - GeeksforGeeks,” 
+GeeksforGeeks, Oct. 23, 2017. https://www.geeksforgeeks.org/python-language
+advantages-applications/ 
+58 
+ 
+[58]. w3Schools, “Introduction to Python,” W3schools.com, 2019. 
+https://www.w3schools.com/python/python_intro.asp 
+
+[59]. “How to Import Pandas as pd in Python,” www.stratascratch.com. 
+https://www.stratascratch.com/blog/how-to-import-pandas-as-pd-in
+python/#:~:text=We%20can%20simply%20write%20 (accessed Aug. 01, 2023). 
+
+[60]. “mlxtend-TransactionEncoder, association_rules,” Hola Mundo, Jun. 23, 2021. 
+https://holamundo.tistory.com/m/entry/mlxtend (accessed Aug. 01, 2023). 
+
+[61]. “TransactionEncoder - mlxtend,” rasbt.github.io. 
+https://rasbt.github.io/mlxtend/user_guide/preprocessing/TransactionEncoder/#:~:text=Tr
+ ansforms%20an%20encoded%20NumPy%20array%20back%20into%20transactions.&te
+ xt=list%20of%20lists- (accessed Aug. 01, 2023). 
+ 
+[62]. “Applying Transaction Encoder on Dataset,” Stack Overflow. 
+https://stackoverflow.com/questions/58435648/applying-transaction-encoder-on-dataset 
+(accessed Aug. 01, 2023). 
+
+[63]. “Mlxtend.frequent patterns - mlxtend,” rasbt.github.io. 
+https://rasbt.github.io/mlxtend/api_subpackages/mlxtend.frequent_patterns/ 
+
+[64]. “Apriori - mlxtend,” rasbt.github.io. 
+https://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori/ 
+
+[65]. S. Raschka, “Association rules - mlxtend,” rasbt.github.io. 
+https://rasbt.github.io/mlxtend/user_guide/frequent_patterns/association_rules/ 
+
+[66]. “MLXTENDのでのアソシエーション分析 – S-Analysis,” Data-analysis-stats.jp, 2020. 
+https://data-analysisstats.jp/%e6%a9%9f%e6%a2%b0%e5%ad%a6%e7%bf%92/mlxtend%e3%81%ae%e3%
+ 81%a7%e3%81%ae%e3%82%a2%e3%82%bd%e3%82%b7%e3%82%a8%e3%83%bc%
+ e3%82%b7%e3%83%a7%e3%83%b3%e5%88%86%e6%9e%90/ (accessed Aug. 01, 
+2023). 
+
+[67]. “pandas read csv() Tutorial: Importing Data,” www.datacamp.com. 
+https://www.datacamp.com/tutorial/pandas-read-csv (accessed Aug. 01, 2023). 
+
+[68]. “Python | Read csv using pandas.read_csv(),” GeeksforGeeks, Jul. 03, 2018. 
+https://www.geeksforgeeks.org/python-read-csv-using-pandas-read_csv/ 
+
+[69]. “Applying Lambda functions to Pandas Dataframe,” GeeksforGeeks, Aug. 22, 2020. 
+https://www.geeksforgeeks.org/applying-lambda-functions-to-pandas-dataframe/ 
+
+[70]. “How to properly apply a lambda function into a pandas data frame column,” Stack 
+Overflow. https://stackoverflow.com/questions/37428218/how-to-properly-apply-a
+lambda-function-into-a-pandas-data-frame-column (accessed Aug. 01, 2023). 
+
+[71]. Zach, “Pandas: How to Use Apply & Lambda Together,” Statology, Jun. 23, 2022. 
+https://www.statology.org/pandas-apply-lambda/ (accessed Aug. 01, 2023). 
+
+[72]. S. Aslam, “Apply Lambda Function to Pandas DataFrame,” Delft Stack, Jan. 06, 
+2022. https://www.delftstack.com/howto/python-pandas/apply-lambda-functions
+to-pandas-dataframe/ (accessed Aug. 01, 2023). 
+
+[73]. “One-hot-encoding using TransactionEncoder for lists with different number of elements,” 
+Stack Overflow. https://stackoverflow.com/questions/69983282/one-hot-encoding-using
+transactionencoder-for-lists-with-different-number-of-ele (accessed Aug. 02, 2023). 
+
+[74]. S. kmair, “Market Basket Analysis,” Medium, Dec. https://sarakmair.medium.com/market-basket-analysis-8dc699b7e27 
+
+[75]. “One-hot encoding transaction data | Python,” 18, 2019. campus.datacamp.com. 
+https://campus.datacamp.com/courses/market-basket-analysis-in-python/introduction-to
+market-basket-analysis-1?ex=9 (accessed Aug. 02, 2023). 
+
+[76]. “Mlxtend.preprocessing - mlxtend,” rasbt.github.io. https://rasbt.github.io/mlxtend/api_subpackages/mlxtend.preprocessing/ (accessed Aug. 
+02, 2023). 
+
+[77]. A. Fawcett, “Data Science in 5 Minutes: What is One Hot Encoding?,” Educative: Interactive Courses for Software 
+Developers, Feb. 11, 2021. https://www.educative.io/blog/one-hot-encoding 
+
+[78]. “One-hot,” Wikipedia, Jan. 25, 2021. https://en.wikipedia.org/wiki/One-hot 
+
+[79]. “APRIORI Algorithm Professor Anita Wasilewska Lecture Notes.” Available: 
+https://www3.cs.stonybrook.edu/~cse634/lecture_notes/07apriori.pdf 
+
+[80]. “Apriori Algorithm In Data Mining With Examples.” 
+https://www.datamining365.com/2020/01/apriori-algorithm.html (accessed Aug. 04, 
+2023). 
+[81]. “Principle and Pseudocode of Apriori Algorithm - Code World,” www.codetd.com. 
+https://www.codetd.com/en/article/13832075 (accessed Aug. 04, 2023). 
+
+[82]. “Apriori Algorithm: Easy Implementation Using Python 2023,” hands-on.cloud, Feb. 14, 
+2022. https://hands-on.cloud/apriori-algorithm-python-implementation/ 
+
+[83]. “Apriori Algorithm: Easy Implementation Using Python 2023,” hands-on.cloud, Feb. 14, 
+2022. https://hands-on.cloud/apriori-algorithm-python-implementation/?utm_content=cmp-true 
+
+[84]. “Getting Started with Apriori Algorithm in Python,” Engineering Education (EngEd) 
+Program | Section. https://www.section.io/engineering-education/apriori-algorithm-in
+python/ 
+
+[85]. Aditya, “Implement Apriori Algorithm in Python,” Coding Infinite, May 20, 2023. 
+https://codinginfinite.com/implement-apriori-algorithm-in-python/ (accessed Aug. 04, 
+2023) 
+
+[86]. P. Vaish, “Apriori Algorithm (Python 3.0),” A Data Analyst, Aug. 07, 2016. 
+https://adataanalyst.com/machine-learning/apriori-algorithm-python-3-0/ (accessed Aug. 
+04, 2023). 
+
+[87]. Azeez, Ayemobola, Misra, Maskeliūnas, and Damaševičius, “Network Intrusion Detection 
+with a Hashing Based Apriori Algorithm Using Hadoop MapReduce,” Computers, vol. 8, 
+no. 4, p. 86, Dec. 2019, doi: https://doi.org/10.3390/computers8040086. 
+
+[88]. Y. Zhang, D. Wang, Y. Wu, Y. Liu, N. Zhang, and Y. Li, “Network Intrusion Detection 
+Based on Apriori-Kmeans Algorithm,” pp. 101–109, Jan. 2022, doi: https://doi.org/10.1007/978-981-19-2448-4_10. 
+
+[89]. www.researchgate.net. https://www.researchgate.net/publication/314522608_The_Research_about_Data_Mining
+ _of_Network_Intrusion_Based_on_Apriori_Algorithm (accessed Aug. 04, 2023). 
+
 
 
 
