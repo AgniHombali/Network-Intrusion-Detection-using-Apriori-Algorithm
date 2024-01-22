@@ -1269,21 +1269,36 @@ Output when minimum support is 0.001:
 **Output Display:** 
 
 support                                       itemsets 
+
 0    0.782209                                   (10.10.1.13) 
+
 1    0.024540                                   (10.10.1.14) 
+
 2    0.840491                                   (10.10.1.19) 
+
 3    0.018405                                   (10.10.1.22) 
+
 4    0.018405                                  (10.10.1.255) 
+
 ..        
+
 …                                            
+
 … 
+
 106  0.024540    (ff02::16, fe80::15:5dff:fe12:438b, ICMPv6) 
+
 107  0.006135  (ff02::16, fe80::3f56:de95:b62b:7e61, ICMPv6) 
+
 108  0.006135   (ff02::2, fe80::3f56:de95:b62b:7e61, ICMPv6) 
+
 109  0.042945      (fe80::15:5dff:fe12:438b, ff02::fb, MDNS) 
+
 110  0.018405    (MDNS, ff02::fb, fe80::3f56:de95:b62b:7e61) 
 
+
 [111 rows x 2 columns] 
+
 
 Here, we can see that almost the entire dataset has come out in the output. There are 111 rows. 
 Most of this data is not even necessary to conclude with a warning or not [82][83][84][85][86]. 
@@ -1305,13 +1320,21 @@ Now, let us try to keep the minimum support as moderate as 0.5 and see what the 
 **Output Display:**
 
 support                        itemsets 
+
 0  0.782209                    (10.10.1.13) 
+
 1  0.840491                    (10.10.1.19) 
+
 2  0.782209                          (ICMP) 
+
 3  0.782209        (10.10.1.13, 10.10.1.19) 
+
 4  0.782209              (ICMP, 10.10.1.13) 
+
 5  0.782209              (ICMP, 10.10.1.19) 
+
 6  0.782209  (ICMP, 10.10.1.13, 10.10.1.19) 
+
 
 Here, the output is a better and more comprehensive output. A Network Intrusion 
 Detection System can easily find the most frequent itemset and raise an alert. This is 
